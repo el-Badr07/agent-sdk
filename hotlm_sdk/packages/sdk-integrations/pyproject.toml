@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hotlm-integrations"
+version = "0.0.1"
+description = "Integrations for HotLM SDK (LLMs, etc.)"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" },
+]
+dependencies = [
+    "hotlm-core>=0.0.1",  # Remove local path reference, rely on installed sdk-core
+    # Add optional dependencies for specific integrations below
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.0.0"]
+huggingface = ["transformers>=4.0.0", "torch>=2.0.0"] # Example dependencies
+
+[tool.hatch.build.targets.wheel]
+packages = ["hotlm_integrations"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/hotlm_integrations", "/pyproject.toml", "/README.md"]
+
+[tool.ruff]
+# Add Ruff configuration if needed
+line-length = 88
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]

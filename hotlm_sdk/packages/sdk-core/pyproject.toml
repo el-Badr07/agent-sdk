@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hotlm-core"
+version = "0.0.1"
+description = "Core interfaces and schemas for the HotLM Agent Framework"
+readme = "README.md"  # Assuming a README will be added later
+license = "MIT"  # Or your chosen license
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = [
+    "pydantic>=1.10,<3",  # For data validation and schemas
+    "typing_extensions>=4.0.0", # For newer typing features
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/hotlm-sdk" # Replace with actual URL later
+Repository = "https://github.com/your-username/hotlm-sdk" # Replace with actual URL later

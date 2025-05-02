@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "hotlm_sdk"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

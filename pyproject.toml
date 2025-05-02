@@ -1,0 +1,20 @@
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+skip = ['build/', 'dist/', '.venv/']
+
+[tool.isort]
+profile = 'black'
+line_length = 88
+skip = ['build', 'dist', '.venv']
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ['E203', 'W503']
+exclude = ['build', 'dist', '.venv']
+
+[tool.mypy]
+python_version = '3.11'
+strict = true
+ignore_missing_imports = true
